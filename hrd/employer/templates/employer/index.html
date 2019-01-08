@@ -1,0 +1,10 @@
+<head>Current Openings</head>
+{% if latest_job_list %}
+ <ul>
+ {% for job in latest_job_list %}
+  <li><a href="/employer/{{ job.id }}/">{{ job.title }}</a></li>
+ {% endfor %}
+ </ul>
+{% else %}
+ <p>No jobs are available.</p>
+{% endif %} 
